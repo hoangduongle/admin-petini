@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Table from "../components/table/Table";
 import * as customerView from "../api/Customer/viewCustomers";
 
-const customerTableHead = ["Mã", "Ngày mua", "Tổng tiền"];
+const customerTableHead = ["Mã", "Ngày mua", "Số điện thoại", "Tổng tiền"];
 
 const renderHead = (item, index) => <th key={index}>{item}</th>;
 
@@ -11,6 +11,7 @@ const renderBody = (item, index) => (
   <tr key={index}>
     <td>{item.id}</td>
     <td>{item.date}</td>
+    <td>{item.user.phone}</td>
     <td>{item.totalAmount}</td>
   </tr>
 );
